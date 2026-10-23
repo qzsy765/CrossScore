@@ -1,0 +1,14 @@
+data/
+datasets/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.log
+*.zip
+.env
+*.pem
+__pycache__/
+venv/

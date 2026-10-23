@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: Cite the paper and its future Zenodo DOI after release.
+title: CrossScore OOD-KD controlled code evidence
+version: 1.0.0
+type: software
+authors:
+  - family-names: Chen
+    given-names: Yusi

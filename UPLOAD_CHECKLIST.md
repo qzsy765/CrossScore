@@ -1,0 +1,9 @@
+- [ ] Check folder contents, origin and distribution rights.
+- [ ] Check internal path strings and any provider-specific configuration.
+- [ ] Confirm coauthor consent, amend CITATION.cff to accurate author list.
+- [ ] Add author-approved LICENSE before Public.
+- [ ] Run python scripts/verify_hashes.py and python scripts/recompute_stats.py.
+- [ ] Test representative training and evaluation on a fresh machine with authorized data and teacher checkpoint (not done by the package preparation).
+- [ ] Change GitHub repository visibility Private -> Public only after checks.
+- [ ] Connect repo in Zenodo, then create tagged GitHub Release v1.0.0.
+- [ ] Replace DOI and GitHub link placeholders in manuscript/rebuttal only after real publication.

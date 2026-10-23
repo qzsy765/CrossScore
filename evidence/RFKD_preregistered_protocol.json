@@ -1,0 +1,67 @@
+{
+  "title": "P1-5 mechanism-matched RFKD comparator for Scientific Reports revised manuscript",
+  "status": "PRE_REGISTERED_BEFORE_FIRST_RFKD_FORMAL_TRAIN",
+  "utc": "2026-10-22T03:32:31.290228+00:00",
+  "paper_of_record": "Residual Feature-Driven Knowledge Distillation for Reliable Open-Set Scene Understanding Under Distribution Shift, Electronics 15(16), 3556 (2026), DOI 10.3390/electronics15163556",
+  "formal_manuscript_basis": "Cross-Score Uncertainty Transfer via Asymmetric Distillation for OOD Detection; original source narrative takes precedence over early draft awareKD1",
+  "classification": "RFKD_MECHANISM_MATCHED_REIMPLEMENTATION_NOT_OFFICIAL_RELEASE",
+  "baseline_B2_protocol_src_sha256": "252134648ed4ad1154fa65bcc9e267209aa37e723020d2783fc4baa8827e98a8",
+  "baseline_B2_trainer_src_sha256": "bd2d69e8a9b7a635a8c6d49dfd216d43618952e156956cef76daae25e40ad306",
+  "RFKD_local_protocol_src_sha256": "c511ff6c6fc5b8d28218559a53c429254ec11ff1b03110547c18298f3fee28c8",
+  "RFKD_local_trainer_src_sha256": "2318aa2c027e2e1ae37d2aa9595fb17645d01885d5f4a204a2f8e0f5f79dbafb",
+  "checkpoint_weight_sha256": {
+    "cifar10": "80ea46669bb0eb8582746315358e97b0a404960363e86fe90ab64bb8ba26a41b",
+    "cifar100": "8ffbd65a1f3457abfaf46d548ccb582ad9f0d3c83cc296807f9dc7e06667f8c6"
+  },
+  "seed_values": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "dataset_values": [
+    "cifar10",
+    "cifar100"
+  ],
+  "methods": [
+    "RFKD_EnergyOrder_T1_PublishedSpec",
+    "RFKD_EnergyOrder_T6_Matched"
+  ],
+  "methods_description": {
+    "RFKD_EnergyOrder_T1_PublishedSpec": "Teacher confidence+entropy from T=1 softmax; teacher ranking -logsumexp raw; student h(f) ranking alpha=0.",
+    "RFKD_EnergyOrder_T6_Matched": "Teacher confidence+entropy from T=6 softmax; teacher ranking -logsumexp raw; student h(f) ranking alpha=0. Same as matched B2 T6 CrossScore except teacher order target is Energy not 1-MSP."
+  },
+  "matched_comparators": {
+    "T1": "CrossScore_LegacyAsCode",
+    "T6": "CrossScore_T6_Corrected"
+  },
+  "N_full_design": 20,
+  "N_initial_gate": 4,
+  "primary_contrast": "CIFAR100 five-seed difference in average Energy AUROC over all six OOD domains: CrossScore_T6_Corrected minus RFKD_EnergyOrder_T6_Matched, paired by seed; show exact sign-flip p and raw five seed differences. No generalization claim from n=5.",
+  "secondary": "CIFAR10 six OOD domain AUROC and FPR95, CIFAR100 domain heterogeneity; T1 comparison; ID validation accuracy differences, compute cost.",
+  "statistical_caveat": "5 paired seeds two-sided sign-flip p lower bound .0625",
+  "dataset_split_seed": 20261020,
+  "train_examples": 45000,
+  "id_validation_examples": 5000,
+  "architecture": "CIFAR style ResNet18 student and fixed ResNet50 teacher, identical B2 checkpoint, 200 epochs, batch128 SGD .1 momentum .9 weight decay .0005 cosine",
+  "reuse": "Existing B2 CE/VanillaKD/CrossScore T1/T6 40 trained models unchanged; train RFKD only",
+  "no_OOD_during_training": true,
+  "no_ODD_test_tuning": true,
+  "OOD_score": "negative logsumexp student logits, higher OOD",
+  "no_overwrite": true,
+  "no_shared_checkpoint_mutation": true,
+  "phase1_four_models": [
+    "cifar10__seed101__RFKD_EnergyOrder_T6_Matched",
+    "cifar100__seed101__RFKD_EnergyOrder_T6_Matched",
+    "cifar10__seed101__RFKD_EnergyOrder_T1_PublishedSpec",
+    "cifar100__seed101__RFKD_EnergyOrder_T1_PublishedSpec"
+  ],
+  "stopping_rule": "If any mismatch in teacher hash, model initial hash, split, GPU lease, checksum or preliminary scientific ambiguity, stop and audit before remaining 16.",
+  "disclosure_caveats": [
+    "This is a mechanism-matched reimplementation, not an authenticated reproduction of official published RFKD original runs.",
+    "Energy target and T6 teacher confidence settings differ from T1 published RFKD main configuration.",
+    "Train/validation CIFAR split follows B2, not necessarily the publication setup; use as a controlled factorial under one protocol.",
+    "CrossScore publication novelty must be distinguished from already published overlapping RFKD contributions explicitly."
+  ]
+}

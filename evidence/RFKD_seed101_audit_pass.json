@@ -1,0 +1,33 @@
+{
+  "name": "P1-5 first 4 RFKD models versus paired B2 CrossScore: independent OOD audit",
+  "status": "P1_5_4_RFKD_MODELS_AND_4_B2_PAIRS_AUDIT_PASS",
+  "utc": "2026-10-22T08:29:43.690367+00:00",
+  "n_RF_KD_models": 4,
+  "n_B2_matched_controls": 4,
+  "n_model_domain_score_records": 144,
+  "n_independently_recalculated_metrics": 432,
+  "max_error": 2.220446049250313e-16,
+  "sha256_checkpoints": {
+    "cifar10__seed101__RFKD_EnergyOrder_T6_Matched": "e757b619eb33bb415a70037213f4ae79f4d277ce016837879edd24fdd974ff4b",
+    "cifar10__seed101__CrossScore_T6_Corrected": "98f843df74232e3058ae632a9bfbdfd26c8e82bb8f79ff5418e70fa2c085aa65",
+    "cifar10__seed101__RFKD_EnergyOrder_T1_PublishedSpec": "9b08cdfe99ae82e0d6a1e1cdab39156f04006be1628064ccaa18e4ea4b443724",
+    "cifar10__seed101__CrossScore_LegacyAsCode": "f048c1404b328ea9d08b7286608b68a4cf44cde972a98eed40d27e45604fe8d6",
+    "cifar100__seed101__RFKD_EnergyOrder_T6_Matched": "2a8b4be1fcca20c3a54df45c2ed797f51eea6f487f5521d721b8e32f9ff4bb3f",
+    "cifar100__seed101__CrossScore_T6_Corrected": "df82c10a8b0f83db1c3041bb4170c4e99fcce7548220cf233791414f7d181923",
+    "cifar100__seed101__RFKD_EnergyOrder_T1_PublishedSpec": "35ad3303d40a50164624699abfc3fcd9c8e6920ff7303f40d8950652e3c7e946",
+    "cifar100__seed101__CrossScore_LegacyAsCode": "067daa3fce8c049f46496bddea5bc7961d6e29eaafc87bca24d5cf9de7c4bc16"
+  },
+  "science_limits": [
+    "One training seed per dataset x teacher target x temperature. No hypothesis significance claim.",
+    "Official published RFKD checkpoint was unavailable; mechanism-matched reimplementation not authenticated official code.",
+    "When comparing T1 and T6, only teacher supervision temperature changes; RFKD teacher Energy ordering unchanged.",
+    "CIFAR10/100 six OOD domains are the same frozen benchmark, and not independent seed replicates.",
+    "CrossScore manuscript differs in some historic original experimental settings; this is a new controlled matched protocol.",
+    "No test/OOD-based model selection, posthoc hyperparameter optimization or excluded negative domain.",
+    "Any decision to extend seeds 202/303/404/505 is separate, based on scientific reviewers needs, not win rate."
+  ],
+  "frozen_release_sha256": "4dd403a3e84d92318fc19d16508717c3d720baa119643e9c978dbebfd18e668b",
+  "frozen_evaluation_sha256": "c57bc5a32c334d67551547c722f1d69b14feacc06afc2da6a2d921fadc158c55",
+  "id_only_audit_sha256": "4317651e292e229dfdda54fe17d615efd6defd6739fc67377206736aa1fdb154",
+  "per_domain_csv_SHA256": "190531742196418c85bda237f62e26d655cfd756c16e0de292bd0148f85c948e"
+}
