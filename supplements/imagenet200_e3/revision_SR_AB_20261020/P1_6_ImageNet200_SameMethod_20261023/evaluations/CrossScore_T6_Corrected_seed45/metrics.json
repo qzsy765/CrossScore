@@ -1,0 +1,54 @@
+{
+  "protocol": "CrossScore-SR-AB-P1-6-ImageNet200-same-objective-v1",
+  "run": "CrossScore_T6_Corrected_seed45",
+  "mode": "CrossScore_T6_Corrected",
+  "seed": 45,
+  "selected_epoch": 58,
+  "selected_checkpoint_val_acc": 0.841,
+  "id_test_top1": 0.8594444444444445,
+  "score": "-logsumexp(logits), higher=more OOD",
+  "positive_class": "OOD",
+  "ood_metrics": {
+    "ssb_hard": {
+      "AUROC": 0.613088052154195,
+      "AUPR": 0.8921783625363999,
+      "FPR95_complete_ties": 0.8827777777777778
+    },
+    "ninco": {
+      "AUROC": 0.5926422199542629,
+      "AUPR": 0.49399026266601875,
+      "FPR95_complete_ties": 0.8846666666666667
+    },
+    "inaturalist": {
+      "AUROC": 0.5377205722222221,
+      "AUPR": 0.5768188317038977,
+      "FPR95_complete_ties": 0.9153333333333333
+    },
+    "texture": {
+      "AUROC": 0.6628889642549527,
+      "AUPR": 0.5459701260398094,
+      "FPR95_complete_ties": 0.8705555555555555
+    },
+    "openimage_o": {
+      "AUROC": 0.5919744820439572,
+      "AUPR": 0.722686995393069,
+      "FPR95_complete_ties": 0.898
+    }
+  },
+  "near_macro": {
+    "AUROC": 0.602865136054229,
+    "AUPR": 0.6930843126012094,
+    "FPR95_complete_ties": 0.8837222222222223
+  },
+  "far_macro": {
+    "AUROC": 0.5975280061737106,
+    "AUPR": 0.6151586510455921,
+    "FPR95_complete_ties": 0.8946296296296296
+  },
+  "all_5_ood_macro": {
+    "AUROC": 0.599662858125918,
+    "AUPR": 0.6463289156678389,
+    "FPR95_complete_ties": 0.8902666666666667
+  },
+  "raw_scores_file": "/SET_PRIVATE_DATA_ROOT/projects/OOD/cross_score_v2/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/evaluations/CrossScore_T6_Corrected_seed45/energy_scores_per_image.npz"
+}

@@ -1,0 +1,104 @@
+{
+  "audit_timestamp_utc": "2026-10-25T13:05:43.532984+00:00",
+  "scope": "ImageNet-200 same-objective scratch v1 on frozen CE/CrossScore T6 5 seeds each",
+  "full_train_runs_complete": 10,
+  "full_eval_runs_complete": 10,
+  "score_arrays_checked": 10,
+  "sample_sizes_per_run": {
+    "id_test_energy": 9000,
+    "ssb_hard_energy": 49000,
+    "ninco_energy": 5879,
+    "inaturalist_energy": 10000,
+    "texture_energy": 5160,
+    "openimage_o_energy": 15869
+  },
+  "score_positive_class": "OOD",
+  "score": "-logsumexp(logits)",
+  "report_primary": {
+    "name": "all_5_ood_macro.AUROC",
+    "paired": {
+      "metric": "all_5_ood_macro.AUROC",
+      "n_paired": "5",
+      "mean_CrossScore_minus_CE": "-0.258092507542078",
+      "sd_paired_difference": "0.009586887432051137",
+      "ci95_t_low": "-0.2699962005212881",
+      "ci95_t_high": "-0.24618881456286795",
+      "paired_t_statistic": "-60.19809822925907",
+      "paired_t_p_two_sided": "4.560596219595749e-07",
+      "exact_sign_flip_p_two_sided": "0.0625",
+      "positive_seed_differences": "0",
+      "seed_differences": "42:-0.267143;43:-0.247358;44:-0.254814;45:-0.269160;46:-0.251988"
+    }
+  },
+  "run_checks": [
+    {
+      "run": "CE_seed42",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CE_seed43",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CE_seed44",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CE_seed45",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CE_seed46",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CrossScore_T6_Corrected_seed42",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CrossScore_T6_Corrected_seed43",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CrossScore_T6_Corrected_seed44",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CrossScore_T6_Corrected_seed45",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    },
+    {
+      "run": "CrossScore_T6_Corrected_seed46",
+      "train_complete": true,
+      "eval_complete": true,
+      "all_score_arrays_finite_and_cardinality_correct": true
+    }
+  ],
+  "main_sources": {
+    "summary_mean_sd.csv": "e6684be96b59c77c4fb06df24f345a464ee4efe9ef06373ada1418cbf63eccac",
+    "paired_comparison.csv": "2f64bc9d8a6583cc061971b046699ac8c2f73bf9be24761f418ea3aec8265186",
+    "summary.json": "acf975699df9d74a6443749b24fac509045fc33e63e9221b635529f289117c57",
+    "source/train_im200_scratch_same_method_local.py": "48d04344e703bc73ae0e9313c389345f2f085867701b7b5e54890ed6246dcbc5",
+    "source/eval_im200_same_method_recovery.py": "185eeef207431201b177164d9de0c46a08ecda2a1293dc38a44294176f44b706",
+    "source/im200_data_eval_recovery.py": "92d1d40ee4033f956077ef1a6f2f6da16fa67dade9a00241f2c32cfad68a3399",
+    "audit_20261025/sampled_logit_geometry_seed42.json": "1def3212611d0f51200e33994ad1ea7cff4e53c4c5ddba06da55747efb1f7ee2"
+  }
+}

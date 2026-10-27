@@ -1,0 +1,72 @@
+{
+  "stage": "P1-7D post-ID-only-freeze exploratory factorial OOD result",
+  "created_utc": "2026-10-26T08:38:59.496722+00:00",
+  "primary_metric": "energy macro AUROC on 5 OOD domains",
+  "repeated_seeds": [
+    42,
+    43
+  ],
+  "n_arms": 4,
+  "new_runs": 6,
+  "disclosure": "two seeds only, post-hoc mechanism study after P1-6 failure, no claim of independent confirmation",
+  "reference_data": "P1-7B existing T1_E1 frozen corrected-T6 student-T1 baseline; not a new training run",
+  "focus": [
+    {
+      "variant": "T1_E1",
+      "primary_energy_auroc_macro": 0.6133266327911886,
+      "neg_msp_auroc_macro": 0.8564912741701904,
+      "neg_maxlogit_auroc_macro": 0.8487827142701394,
+      "entropy_auroc_macro": 0.8250964895046099,
+      "aux_uncert_auroc_macro": 0.8866880919790101,
+      "energy_fpr95_macro": 0.8834444444444445,
+      "energy_auroc_seed_values": [
+        0.6045927466672556,
+        0.6220605189151216
+      ]
+    },
+    {
+      "variant": "T1_E0",
+      "primary_energy_auroc_macro": 0.840051468908408,
+      "neg_msp_auroc_macro": 0.866396451230864,
+      "neg_maxlogit_auroc_macro": 0.8570870461018238,
+      "entropy_auroc_macro": 0.8711341388099625,
+      "aux_uncert_auroc_macro": 0.8695496150988917,
+      "energy_fpr95_macro": 0.5572222222222222,
+      "energy_auroc_seed_values": [
+        0.8410141813841363,
+        0.8390887564326798
+      ]
+    },
+    {
+      "variant": "T6_E1",
+      "primary_energy_auroc_macro": 0.8815961154529809,
+      "neg_msp_auroc_macro": 0.8749243924383432,
+      "neg_maxlogit_auroc_macro": 0.8837115357033059,
+      "entropy_auroc_macro": 0.8851735243301535,
+      "aux_uncert_auroc_macro": 0.8740149315648749,
+      "energy_fpr95_macro": 0.4255888888888889,
+      "energy_auroc_seed_values": [
+        0.8846349744121651,
+        0.8785572564937967
+      ]
+    },
+    {
+      "variant": "T6_E0",
+      "primary_energy_auroc_macro": 0.8747251714188771,
+      "neg_msp_auroc_macro": 0.8713002725607104,
+      "neg_maxlogit_auroc_macro": 0.8773428741168787,
+      "entropy_auroc_macro": 0.8803042376715764,
+      "aux_uncert_auroc_macro": 0.8692607359514972,
+      "energy_fpr95_macro": 0.4425222222222222,
+      "energy_auroc_seed_values": [
+        0.8737839286815238,
+        0.8756664141562303
+      ]
+    }
+  ],
+  "paired_delta_rows": 432,
+  "full_result_file": "/SET_PRIVATE_DATA_ROOT/projects/OOD/cross_score_v2/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/P1_7D_factorial_OOD_exploratory_20261026/all_score_metrics_by_seed.csv",
+  "delta_file": "/SET_PRIVATE_DATA_ROOT/projects/OOD/cross_score_v2/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/P1_7D_factorial_OOD_exploratory_20261026/paired_changes_vs_T1_E1.csv",
+  "original_P1_7D_protocol_sha256": "2f9563f012df3ae0791a081190c38b9bee870f17f490de42b8ad0b6bcd389e2e",
+  "original_ID_only_gate_sha256": "305e25f64f68dbe2f7ed0c9def604e2abbcc6371a9f994c3172235ca90c348b6"
+}

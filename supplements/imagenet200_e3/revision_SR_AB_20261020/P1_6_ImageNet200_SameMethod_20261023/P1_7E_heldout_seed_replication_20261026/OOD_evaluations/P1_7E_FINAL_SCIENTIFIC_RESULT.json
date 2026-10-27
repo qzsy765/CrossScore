@@ -1,0 +1,133 @@
+{
+  "study": "P1-7E fixed T6_E1 new seeds 44-46, paired controls",
+  "created_utc": "2026-10-26T14:40:36.089479+00:00",
+  "scope": "within-seen-ImageNet200 benchmark replication, not independent out-of-domain generalization proof",
+  "n_seed_pairs": 3,
+  "seeds": [
+    44,
+    45,
+    46
+  ],
+  "main_frozen_energy_five_macro": {
+    "T6_E1_heldout": {
+      "AUROC": {
+        "mean": 0.8818161706149344,
+        "seed_values": [
+          0.882394797449245,
+          0.8788363237501896,
+          0.884217390645369
+        ]
+      },
+      "AUPR": {
+        "mean": 0.8891666320442507,
+        "seed_values": [
+          0.8906143095579593,
+          0.8856688735056164,
+          0.8912167130691768
+        ]
+      },
+      "FPR95_complete_ties": {
+        "mean": 0.4224666666666667,
+        "seed_values": [
+          0.42313333333333336,
+          0.4322444444444445,
+          0.4120222222222223
+        ]
+      }
+    },
+    "T1_E1_frozen": {
+      "AUROC": {
+        "mean": 0.6099275200244844,
+        "seed_values": [
+          0.6139668146125237,
+          0.599662858125918,
+          0.6161528873350115
+        ]
+      },
+      "AUPR": {
+        "mean": 0.654026705512977,
+        "seed_values": [
+          0.6546815658550837,
+          0.6463289156678389,
+          0.6610696350160084
+        ]
+      },
+      "FPR95_complete_ties": {
+        "mean": 0.888251851851852,
+        "seed_values": [
+          0.8868444444444444,
+          0.8902666666666667,
+          0.8876444444444445
+        ]
+      }
+    },
+    "CE_frozen": {
+      "AUROC": {
+        "mean": 0.8685814444728029,
+        "seed_values": [
+          0.8687804630425413,
+          0.8688227279996342,
+          0.8681411423762333
+        ]
+      },
+      "AUPR": {
+        "mean": 0.8756528379079388,
+        "seed_values": [
+          0.8750530982530689,
+          0.8779280973719057,
+          0.873977318098842
+        ]
+      },
+      "FPR95_complete_ties": {
+        "mean": 0.4638814814814814,
+        "seed_values": [
+          0.4663777777777778,
+          0.4655555555555555,
+          0.45971111111111107
+        ]
+      }
+    }
+  },
+  "paired_primary_vs_T1_E1": {
+    "score": "energy",
+    "metric": "AUROC",
+    "domain": "five_macro",
+    "comparison": "T6_E1 minus T1_E1_frozen",
+    "delta_seed44": 0.2684279828367213,
+    "delta_seed45": 0.2791734656242716,
+    "delta_seed46": 0.26806450331035747,
+    "delta_mean": 0.27188865059045014,
+    "delta_sd": 0.006311452043647708,
+    "consistent_direction": true,
+    "exact_sign_flip_two_sided_p": 0.25
+  },
+  "paired_primary_vs_CE": {
+    "score": "energy",
+    "metric": "AUROC",
+    "domain": "five_macro",
+    "comparison": "T6_E1 minus CE_frozen",
+    "delta_seed44": 0.013614334406703676,
+    "delta_seed45": 0.010013595750555382,
+    "delta_seed46": 0.016076248269135673,
+    "delta_mean": 0.013234726142131578,
+    "delta_sd": 0.003049100804525913,
+    "consistent_direction": true,
+    "exact_sign_flip_two_sided_p": 0.25
+  },
+  "ID_test_accuracy": [
+    0.861,
+    0.8574444444444445,
+    0.8537777777777777
+  ],
+  "descriptive_gates": {
+    "ID_gate_pass_all": true,
+    "min_ID_top1": 0.8537777777777777,
+    "repair_gain_over_T1_E1_>=_0.15": true,
+    "candidate_within_0.02_CE_energy_AUROC": true,
+    "no_CE_superiority_significance_claim": true
+  },
+  "stats_warning": "Exact paired randomization p min .25 with 3 pairs, cannot support p<.05; multiple correlated OOD datasets are not new independent seeds.",
+  "no_selection": "All new seed runs included regardless of outcome; no OOD-tuned threshold; CE and T1_E1 controls not retrained.",
+  "source_manifest_sha256": "0a99349fcfdf0789eee1d0c84388d8e41503c5ccf1200f63802a6cb8dc5397ed",
+  "ID_frozen_gate_sha256": "76ebe7d59e785f28a988228cb0d67d21648b6f4ee76a87d3d4e2a7f0cf230ad6"
+}

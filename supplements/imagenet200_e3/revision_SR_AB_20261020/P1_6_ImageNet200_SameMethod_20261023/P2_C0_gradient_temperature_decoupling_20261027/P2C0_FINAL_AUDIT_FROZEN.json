@@ -1,0 +1,73 @@
+{
+  "status": "P2C0_FROZEN_COMPLETE",
+  "date_utc": "2026-10-27T01:58:00.516290+00:00",
+  "protocol_sha256": "ad1df69ed99bb6677982b2c007b3e6d35a1cdfe95206cb18e4c14da6cbeaede2",
+  "model_arms": [
+    "T1_E1_GRADDOWN",
+    "T6_E1_GRADUP",
+    "T1_E1_ORIGINAL",
+    "T6_E1_ORIGINAL",
+    "CE"
+  ],
+  "seeds": [
+    44,
+    45,
+    46
+  ],
+  "fixed_subset_sha256": "5d896a7d140403ea83933a3ce0945bdf51b28b5f82987d73fedf2c4e8209a812",
+  "sample_count": 96,
+  "n_batches_nested_per_seed": 4,
+  "new_training": false,
+  "OOD_evaluated": false,
+  "focus_native_student_temperature": {
+    "T1_E1_GRADDOWN": {
+      "ID_energy_batch_std": 0.11398901790380478,
+      "teacher_entropy_gap": 1.0132447183132172,
+      "ID_CE_loss": 1.5084813833236694,
+      "CE_vs_entropy_cos_shared": -0.492723852519889,
+      "CE_vs_weighted_aux_cos_shared": -0.318842565482405,
+      "CE_vs_weighted_aux_cos_layer4": -0.5559208022955116,
+      "weighted_aux_to_CE_norm_ratio": 0.7797457983772532
+    },
+    "T6_E1_GRADUP": {
+      "ID_energy_batch_std": 4.933424433072408,
+      "teacher_entropy_gap": -0.0029015257799377045,
+      "ID_CE_loss": 0.7452561929821968,
+      "CE_vs_entropy_cos_shared": 0.027913372297486912,
+      "CE_vs_weighted_aux_cos_shared": 0.07011043629594453,
+      "CE_vs_weighted_aux_cos_layer4": 0.052924673665258735,
+      "weighted_aux_to_CE_norm_ratio": 0.8774436903356545
+    },
+    "T1_E1_ORIGINAL": {
+      "ID_energy_batch_std": 0.07439837387452523,
+      "teacher_entropy_gap": 0.42856040100256604,
+      "ID_CE_loss": 1.923906832933426,
+      "CE_vs_entropy_cos_shared": -0.4378450459428918,
+      "CE_vs_weighted_aux_cos_shared": -0.31539905078090635,
+      "CE_vs_weighted_aux_cos_layer4": -0.5273356931631937,
+      "weighted_aux_to_CE_norm_ratio": 0.779317590820611
+    },
+    "T6_E1_ORIGINAL": {
+      "ID_energy_batch_std": 5.031683325767517,
+      "teacher_entropy_gap": -0.053496931601936616,
+      "ID_CE_loss": 0.7503996441761652,
+      "CE_vs_entropy_cos_shared": 0.02464663474649187,
+      "CE_vs_weighted_aux_cos_shared": 0.10872602253186446,
+      "CE_vs_weighted_aux_cos_layer4": 0.08636262781488845,
+      "weighted_aux_to_CE_norm_ratio": 0.3607786803282946
+    },
+    "CE": {
+      "ID_energy_batch_std": 4.201297005017598,
+      "teacher_entropy_gap": -0.1519514862447977,
+      "ID_CE_loss": 0.7368801807363828,
+      "CE_vs_entropy_cos_shared": 0.02629886053585152,
+      "CE_vs_weighted_aux_cos_shared": NaN,
+      "CE_vs_weighted_aux_cos_layer4": NaN,
+      "weighted_aux_to_CE_norm_ratio": 0.0
+    }
+  },
+  "paired_metrics_csv": "P2C0_PER_SEED_METRICS.csv",
+  "scientific_limit": "Post-training local gradients and distinct weights; not full trajectory causality; 3 independent seeds only",
+  "future_P2C1": "matched logit-gradient norm intervention at T1 and T6 from same seed initialization, ID-only freeze before any OOD",
+  "historical_adverse_preserved": true
+}
