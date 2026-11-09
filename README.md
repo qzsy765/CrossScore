@@ -1,3 +1,15 @@
+# CrossScore controlled code and evidence
+
+## Round two release v1.2.0
+
+The completed teacher-temperature-6, student-temperature-1 C/E/R component factorial contains 40 models across eight combinations and five seeds. It adds 28 trainings to 12 archived protocol-matched anchors. Entropy matching has the largest adverse Energy AUROC effect within this implementation; ranking depends on the entropy condition. A separate norm-matched follow-up contains six new models and nine archived controls. Negative findings and inference limits are retained.
+
+Download the [complete v1.2.0 source and numerical evidence ZIP](releases/v1.2.0/CrossScore_SR_Round2_Code_v1.2.0.zip), extract it, and follow its README for the CPU summary reproduction commands. The archive contains the 40 model metric records, domain/seed data, frozen protocols, source dependencies, execution amendments, independent audit reports and the unmodified v1.1.0 source. It excludes third-party images, model weights and private per-image arrays. Full clean-environment GPU training replay has not been established.
+
+The [round-two source overview](supplements/round2_20261108/README.md) and executable analysis/source files are also available for inspection. Their evidence files are in the complete ZIP. The previous fixed-version DOI 10.5281/zenodo.23686448 identifies v1.1.0. Cite the corresponding new fixed-version Zenodo record for v1.2.0; all versions belong to [concept DOI 10.5281/zenodo.23585106](https://doi.org/10.5281/zenodo.23585106).
+
+## Earlier release documentation
+
 # CrossScore — controlled research-code evidence
 
 This repository contains the frozen B2 teacher/student training and OOD evaluation code, the mechanism-matched RFKD comparator, five-seed result summaries, and their reproducibility checks.

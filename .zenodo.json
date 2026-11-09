@@ -1,0 +1,27 @@
+{
+  "title": "CrossScore OOD-KD controlled code and round-two component evidence",
+  "upload_type": "software",
+  "description": "Source and derived numerical evidence for the Scientific Reports revision on the limits of MSP-derived supervision for Energy OOD detection. Complete C/E/R factorial, norm-matched follow-up, frozen protocols and independent numerical checks. See README for external data, checkpoint and reproduction limitations.",
+  "creators": [
+    {
+      "name": "Chen, Yusi"
+    }
+  ],
+  "version": "v1.2.0",
+  "license": "mit-license",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/qzsy765/CrossScore/tree/v1.2.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "keywords": [
+    "out-of-distribution detection",
+    "energy score",
+    "uncertainty distillation",
+    "factorial experiment"
+  ],
+  "notes": "This release adds the completed matched-temperature C/E/R factorial and P2-C1 norm-matched follow-up. Five-seed and three-seed estimates are exploratory and use previously examined OOD domains. CPU summary reproduction is distinct from new training and from re-evaluation of raw per-image arrays. The creator follows the existing software record; manuscript authorship is stated separately in the paper."
+}

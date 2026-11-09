@@ -1,0 +1,22 @@
+{
+  "study": "P2-C1 preformal ID-only smoke Amendment 01",
+  "prior_protocol_sha256": "87f48b186a6295ceec18101641870ba510f619fb82bc8c99ca08554f5cb8b815",
+  "prior_v1_source_sha256": "d940c9f1ede91578d7f881fc94b371c1254d75ba1b41deba62e98d1192717f5e",
+  "v2_training_source_sha256": "2fb57d6aa2e0a32cd7cda7e343be8a6965b9b0ee39780be50991e0ef50be6254",
+  "observed_T6_smoke": "2 ID minibatches, target ratio 0.5, original cap200 clipped_fraction=1.0, realized_ratio~0.192; no formal training launched",
+  "cause": "T6 auxiliary class-logit derivative initially very small; scalar objective coefficient hard cap insufficient.",
+  "fix": "Use mathematically equivalent detached logit gradient injected using pseudo-loss z dot normalized_grad. No coefficient upper cap. CE/rank unchanged. Scalar ce+aux*coeff+rank logged for monitoring only, not used for backward.",
+  "equality": "At fixed forward and detached coeff, grad_z of scalar auxiliary loss matches the injected pseudo-loss gradient; outside this local equivalence no scalar potential claimed.",
+  "scope": "Before formal models, based exclusively on ID-only smoke; no OOD used to amend. Prior v1 source, smoke, and protocol retained.",
+  "target_ratio": 0.5,
+  "epochs": 60,
+  "seeds": [
+    44,
+    45,
+    46
+  ],
+  "watchdog": "coefficient>1e8 or aux_norm<1e-10 flagged, fail gate if >10% of weighted samples.",
+  "smoke_gate": "both arms ratio near0.5 abs error <=.01, AMP skipped steps=0, no errors before six formal models may start",
+  "negative_results_preserved": true,
+  "OOD_auto_unblind": false
+}

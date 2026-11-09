@@ -1,8 +1,11 @@
 cff-version: 1.2.0
-message: Cite the paper and its future Zenodo DOI after release.
-title: CrossScore OOD-KD controlled code evidence
-version: 1.0.0
+message: Cite the fixed version Zenodo record corresponding to GitHub release v1.2.0
+title: CrossScore OOD-KD controlled code and round-two component evidence
+version: 1.2.0
 type: software
+license: MIT
+repository-code: https://github.com/qzsy765/CrossScore
+url: https://github.com/qzsy765/CrossScore/releases/tag/v1.2.0
 authors:
   - family-names: Chen
     given-names: Yusi

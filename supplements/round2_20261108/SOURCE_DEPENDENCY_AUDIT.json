@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "n_python_dependencies": 14,
+  "checkpoint_external": true,
+  "records": [
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/source/im200_data_eval_recovery.py",
+      "sha256": "92d1d40ee4033f956077ef1a6f2f6da16fa67dade9a00241f2c32cfad68a3399",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/source/eval_im200_same_method_recovery.py",
+      "sha256": "185eeef207431201b177164d9de0c46a08ecda2a1293dc38a44294176f44b706",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/B2_V1.2_student_20261020/frozen_src/b2_protocol.py",
+      "sha256": "252134648ed4ad1154fa65bcc9e267209aa37e723020d2783fc4baa8827e98a8",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/source/train_im200_scratch_same_method_local.py",
+      "sha256": "48d04344e703bc73ae0e9313c389345f2f085867701b7b5e54890ed6246dcbc5",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/source/train_im200_factorial_pilot_IDonly_20261026.py",
+      "sha256": "3b0f2c7072618a266e892b7dfebe25f2783eb718dc0586484d0d5b97cdf4f941",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/P1_6_ImageNet200_SameMethod_20261023/source/im200_data.py",
+      "sha256": "316b70f02e7af75d310c51cda8e6c097f6266a68851d7e84f021cf049bf4fb4c",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/scripts/im200_models.py",
+      "sha256": "f736c306a4d361bcd3c832e64abfcfbd10194d72b8ac0ce3e87c87f9731cefc4",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_Recovery_Audit_and_P2C1_OOD_20261106/p2c1_recovery_ood_eval.py",
+      "sha256": "ec7f9654fc882a47b0cdbfbe02e690ff57dbfb27f984c64aed80144bdc8ec18d",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/r2_component_factorial_preflight.py",
+      "sha256": "480d74003d6da8c1d50387fd29ff9f43c6832d510257fa386c75df93cf697ae7",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/r2_component_factorial_evaluate.py",
+      "sha256": "612276ad4b26dff0bd6210953cea3bb072c3440baa7f6417c774569af5ac2144",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/r2_component_factorial_train.py",
+      "sha256": "e3ce6ac41ecda3adb2080b2464f2564603ddbc352e615a73d83886ce1484cb23",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/r2_component_factorial_analyze.py",
+      "sha256": "8b4a208ed0da0848138d0762a5a3a3d2616c70822f1892fed2ce76cdc1905d21",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/r2_component_factorial_controller.py",
+      "sha256": "3d42c9da812cc6de3241c30190b87837d8ee8f643cea2a963bef593f8980d9b7",
+      "match": true
+    },
+    {
+      "path": "frozen_project_sources/revision_SR_AB_20261020/R2_CER_Factorial_Tt6_Ts1_20261106/im200_data.py",
+      "sha256": "e752c44da46b651432d23c4b2a1985d1902eb3a9f57f8cffdc5656b496d086d8",
+      "match": true
+    }
+  ]
+}

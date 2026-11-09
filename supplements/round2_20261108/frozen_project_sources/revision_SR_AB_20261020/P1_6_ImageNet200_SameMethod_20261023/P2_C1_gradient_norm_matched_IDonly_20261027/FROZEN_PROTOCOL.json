@@ -1,0 +1,49 @@
+{
+  "phase": "P2-C1 logit gradient norm matched temperature intervention, full ImageNet-200 ID-only",
+  "frozen": true,
+  "created_utc": "2026-10-27",
+  "training_source_sha256": "d940c9f1ede91578d7f881fc94b371c1254d75ba1b41deba62e98d1192717f5e",
+  "prior_p2b_gate_sha256": "a9db3570450f3cf32af868ec8ade44f46645a22f5f4d37ad817e637bbba7e1ef",
+  "prior_p2c0_sha256": "415f289bfa3477d0d318fb2066a64de4af464cc16ca02681f09a2f1f2c1cda26",
+  "temperature_for_arm": {
+    "T1_E1_NORMMATCH": 1.0,
+    "T6_E1_NORMMATCH": 6.0
+  },
+  "teacher_temperature": 6.0,
+  "gradient_norm_match": {
+    "domain": "class logits only",
+    "target_aux_to_CE_ratio": 0.5,
+    "coeff": "detached 0.5*||dCE/dz|| / (||d(conf+entropy)/dz||+1e-12)",
+    "clip": [
+      0.05,
+      200.0
+    ],
+    "rank": 1.0,
+    "not_matched": "aux rank and backbone gradient norm"
+  },
+  "epochs": 60,
+  "batch_size": 512,
+  "workers": 16,
+  "lr": 0.1,
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "scheduler": "per step cosine to 1e-6",
+  "seeds": [
+    44,
+    45,
+    46
+  ],
+  "gpu_allocation": {
+    "A": 44,
+    "B": 45,
+    "C": 46
+  },
+  "arm_order": "T1 then T6 per seed, sequential on each GPU",
+  "same_initialization": "seed reset per run; same ImageNet200 train list and validation; per-seed paired",
+  "ID_checkpoint_selection": "best validation top1 only; no OOD until frozen gate",
+  "ID_gate": "All six run 60 full epochs; 9000 ID test each; best ID val >=0.80; hashes/protocol valid. If coefficient clips on >10% of samples, mark norm-matching incomplete.",
+  "OOD_auto_unblind": false,
+  "negative_results_kept": true,
+  "no_prior_overwrite": true,
+  "scientific_limit": "Exploratory after known five OOD domains. Only logit aux-gradient magnitude targeted; not isolated backbone directions or trajectory causality."
+}

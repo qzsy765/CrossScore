@@ -1,0 +1,3 @@
+# Release v1.2.0
+
+Adds the complete matched-temperature C/E/R factorial, P2-C1 norm-matched source/evaluation and frozen numerical records. All 14 factorial Python dependencies match their frozen protocol hashes. CPU checks reproduce 1,350 factorial summary scalars and 435 norm-matched summary scalars. The independent raw-array audits performed on the research server separately checked 3,600 and 1,350 metrics; raw arrays are not bundled. Previously exposed OOD domains, small seed counts, original loss scales and nonrandomized historical/new execution blocks limit interpretation. Earlier tags and frozen results are retained.

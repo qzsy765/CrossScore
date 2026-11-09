@@ -1,0 +1,21 @@
+{
+  "phase": "P2-C1 full six ID-only run dispatch",
+  "controller_source_sha256": "fca5cd827fdaa44bae54bb7df4b08897801c8e4bdc9d6ec5e836173842af3059",
+  "trainer_source_sha256": "2fb57d6aa2e0a32cd7cda7e343be8a6965b9b0ee39780be50991e0ef50be6254",
+  "ID_eval_source_sha256": "54c2caf48971a53c6c0cab94f9dc4edb798423bc31d0bb060b40a6ee3777cadb",
+  "science_protocol_sha256": "87f48b186a6295ceec18101641870ba510f619fb82bc8c99ca08554f5cb8b815",
+  "amendment_sha256": "a0ce03ee81b865f6a11cb30cf3c97c0a02056c49bfc23bae5f478b041e512f0d",
+  "smoke_gate_sha256": "440caad8ea9c08ea1d19f2a03abc82515069173f037ccb8f1cb36002eb961e66",
+  "seeds": [
+    44,
+    45,
+    46
+  ],
+  "arm_order": [
+    "T1_E1_NORMMATCH",
+    "T6_E1_NORMMATCH"
+  ],
+  "checkpoint_selection": "ID val accuracy only",
+  "new_OOD_reads": false,
+  "no_duplicate_runs": true
+}
